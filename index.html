@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnX - Master New Skills</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="#" class="logo" onclick="navigateTo('home'); return false;">LearnX</a>
+                <input type="text" class="nav-search" placeholder="Search courses..." />
+            </div>
+            <div class="nav-right">
+                <button class="btn btn-ghost" onclick="navigateTo('catalog')">Explore</button>
+                <button class="btn btn-primary" onclick="navigateTo('dashboard')">Dashboard</button>
+                <div class="avatar" onclick="alert('Profile menu')">U</div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- HOME PAGE -->
+            <div id="home" class="page active">
+                <div class="container">
+                    <section class="hero">
+                        <div class="hero-text">
+                            <h1>Master new skills anytime, anywhere</h1>
+                            <p>Join thousands of learners taking courses in web development, design, data science, and more. Start learning today with expert instructors.</p>
+                            <div class="hero-buttons">
+                                <button class="btn btn-primary btn-large" onclick="navigateTo('catalog')">Browse Courses</button>
+                                <button class="btn btn-ghost btn-large" onclick="navigateTo('login')">Sign In</button>
+                            </div>
+                        </div>
+                        <div class="hero-illustration">📚</div>
+                    </section>
+
+                    <section class="featured-section">
+                        <h2 class="section-title">Featured Courses</h2>
+                        <div class="course-grid">
+                            <div class="course-card" onclick="navigateTo('courseDetail')">
+                                <div class="course-image">⚛️</div>
+                                <div class="course-body">
+                                    <span class="course-badge">Intermediate</span>
+                                    <div class="course-title">Modern React Mastery</div>
+                                    <div class="course-instructor">By Sarah Chen</div>
+                                    <div class="course-meta">
+                                        <span>📚 24 lessons</span>
+                                        <span>⏱️ 6.5h</span>
+                                    </div>
+                                    <div class="course-rating">★★★★★ (328)</div>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" style="width: 35%"></div>
+                                    </div>
+                                    <div class="progress-text">35% complete</div>
+                                </div>
+                            </div>
+
+                            <div class="course-card" onclick="navigateTo('courseDetail')">
+                                <div class="course-image">🎨</div>
+                                <div class="course-body">
+                                    <span class="course-badge">Beginner</span>
+                                    <div class="course-title">UI/UX Design Basics</div>
+                                    <div class="course-instructor">By Alex Rivera</div>
+                                    <div class="course-meta">
+                                        <span>📚 18 lessons</span>
+                                        <span>⏱️ 4.2h</span>
+                                    </div>
+                                    <div class="course-rating">★★★★☆ (245)</div>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" style="width: 0%"></div>
+                                    </div>
+                                    <div class="progress-text">Not started</div>
+                                </div>
+                            </div>
+
+                            <div class="course-card" onclick="navigateTo('courseDetail')">
+                                <div class="course-image">🗄️</div>
+                                <div class="course-body">
+                                    <span class="course-badge">Advanced</span>
+                                    <div class="course-title">PostgreSQL Mastery</div>
+                                    <div class="course-instructor">By Mike Johnson</div>
+                                    <div class="course-meta">
+                                        <span>📚 32 lessons</span>
+                                        <span>⏱️ 9.1h</span>
+                                    </div>
+                                    <div class="course-rating">★★★★★ (412)</div>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" style="width: 65%"></div>
+                                    </div>
+                                    <div class="progress-text">65% complete</div>
+                                </div>
+                            </div>
+
+                            <div class="course-card" onclick="navigateTo('courseDetail')">
+                                <div class="course-image">☕</div>
+                                <div class="course-body">
+                                    <span class="course-badge">Intermediate</span>
+                                    <div class="course-title">Spring Boot Backend</div>
+                                    <div class="course-instructor">By Emily Wong</div>
+                                    <div class="course-meta">
+                                        <span>📚 28 lessons</span>
+                                        <span>⏱️ 8.3h</span>
+                                    </div>
+                                    <div class="course-rating">★★★★★ (567)</div>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" style="width: 50%"></div>
+                                    </div>
+                                    <div class="progress-text">50% complete</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- CATALOG PAGE -->
+            <div id="catalog" class="page">
+                <div class="container">
+                    <div class="dashboard-header">
+                        <h2 class="section-title">All Courses</h2>
+                    </div>
+                    <div class="course-grid">
+                        <div class="course-card" onclick="navigateTo('courseDetail')">
+                            <div class="course-image">🐍</div>
+                            <div class="course-body">
+                                <span class="course-badge">Beginner</span>
+                                <div class="course-title">Python for Data Science</div>
+                                <div class="course-instructor">By David Park</div>
+                                <div class="course-meta">
+                                    <span>📚 30 lessons</span>
+                                    <span>⏱️ 7.5h</span>
+                                </div>
+                                <div class="course-rating">★★★★★ (892)</div>
+                            </div>
+                        </div>
+
+                        <div class="course-card" onclick="navigateTo('courseDetail')">
+                            <div class="course-image">⚙️</div>
+                            <div class="course-body">
+                                <span class="course-badge">Advanced</span>
+                                <div class="course-title">DevOps & Docker</div>
+                                <div class="course-instructor">By Lisa Anderson</div>
+                                <div class="course-meta">
+                                    <span>📚 22 lessons</span>
+                                    <span>⏱️ 6.8h</span>
+                                </div>
+                                <div class="course-rating">★★★★☆ (156)</div>
+                            </div>
+                        </div>
+
+                        <div class="course-card" onclick="navigateTo('courseDetail')">
+                            <div class="course-image">📱</div>
+                            <div class="course-body">
+                                <span class="course-badge">Intermediate</span>
+                                <div class="course-title">Mobile App Development</div>
+                                <div class="course-instructor">By Tom Bradley</div>
+                                <div class="course-meta">
+                                    <span>📚 26 lessons</span>
+                                    <span>⏱️ 7.2h</span>
+                                </div>
+                                <div class="course-rating">★★★★★ (634)</div>
+                            </div>
+                        </div>
+
+                        <div class="course-card" onclick="navigateTo('courseDetail')">
+                            <div class="course-image">🤖</div>
+                            <div class="course-body">
+                                <span class="course-badge">Advanced</span>
+                                <div class="course-title">Machine Learning Basics</div>
+                                <div class="course-instructor">By Dr. James Wilson</div>
+                                <div class="course-meta">
+                                    <span>📚 35 lessons</span>
+                                    <span>⏱️ 11h</span>
+                                </div>
+                                <div class="course-rating">★★★★★ (725)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DASHBOARD PAGE -->
+            <div id="dashboard" class="page">
+                <div class="container">
+                    <div class="dashboard-header">
+                        <p class="welcome-text">Welcome back, <strong>Alex</strong> 👋</p>
+                        <h2 class="section-title">Your Learning Progress</h2>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Courses Enrolled</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">156h</div>
+                            <div class="stat-label">Total Learning Time</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">8</div>
+                            <div class="stat-label">Completed Courses</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">45</div>
+                            <div class="stat-label">Current Streak (days)</div>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title">Continue Learning</h3>
+                    <div class="course-grid">
+                        <div class="course-card" onclick="navigateTo('lesson')">
+                            <div class="course-image">⚛️</div>
+                            <div class="course-body">
+                                <div class="course-title">Modern React Mastery</div>
+                                <div class="course-instructor">By Sarah Chen</div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 35%"></div>
+                                </div>
+                                <div class="progress-text">Lesson 9 of 24</div>
+                            </div>
+                        </div>
+
+                        <div class="course-card" onclick="navigateTo('lesson')">
+                            <div class="course-image">🗄️</div>
+                            <div class="course-body">
+                                <div class="course-title">PostgreSQL Mastery</div>
+                                <div class="course-instructor">By Mike Johnson</div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 65%"></div>
+                                </div>
+                                <div class="progress-text">Lesson 21 of 32</div>
+                            </div>
+                        </div>
+
+                        <div class="course-card" onclick="navigateTo('lesson')">
+                            <div class="course-image">☕</div>
+                            <div class="course-body">
+                                <div class="course-title">Spring Boot Backend</div>
+                                <div class="course-instructor">By Emily Wong</div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 50%"></div>
+                                </div>
+                                <div class="progress-text">Lesson 14 of 28</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COURSE DETAIL PAGE -->
+            <div id="courseDetail" class="page">
+                <div class="course-detail-header">
+                    <div class="container">
+                        <div class="course-detail-title">Modern React Mastery</div>
+                        <div class="course-detail-meta">
+                            <span>👤 Sarah Chen</span>
+                            <span>⭐ 4.9 (328 reviews)</span>
+                            <span>📚 24 lessons</span>
+                            <span>⏱️ 6.5 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container course-detail">
+                    <div class="course-detail-content">
+                        <div class="course-description">
+                            <h3>About this course</h3>
+                            <p>Learn modern React development from scratch. This comprehensive course covers functional components, hooks, state management, and best practices for building production-ready applications.</p>
+                            <p>You'll build real-world projects including a weather app, e-commerce platform, and real-time chat application.</p>
+
+                            <div class="syllabus">
+                                <h3>Course Syllabus</h3>
+                                <div class="syllabus-item">
+                                    <strong>Section 1: React Fundamentals</strong> (6 lessons)
+                                </div>
+                                <div class="syllabus-item">
+                                    <strong>Section 2: Hooks Deep Dive</strong> (5 lessons)
+                                </div>
+                                <div class="syllabus-item">
+                                    <strong>Section 3: State Management</strong> (6 lessons)
+                                </div>
+                                <div class="syllabus-item">
+                                    <strong>Section 4: Advanced Patterns</strong> (7 lessons)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-sidebar">
+                            <div class="course-price">Free</div>
+                            <button class="btn btn-primary btn-large" style="width: 100%; margin-bottom: 1rem;" onclick="navigateTo('lesson')">Continue Learning</button>
+                            <ul class="course-features">
+                                <li>Lifetime access</li>
+                                <li>24 video lessons</li>
+                                <li>Source code included</li>
+                                <li>Downloadable resources</li>
+                                <li>Certificate of completion</li>
+                                <li>Community support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LESSON PAGE -->
+            <div id="lesson" class="page">
+                <div class="container lesson-container">
+                    <div class="video-player">
+                        <video controls>
+                            <source src="about:blank" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div class="lesson-content">
+                        <div class="lesson-main">
+                            <h1 class="lesson-title">Lesson 9: Advanced Hooks Patterns</h1>
+                            <p class="lesson-description">
+                                In this lesson, we explore advanced patterns with React Hooks including custom hooks, useReducer, and complex state management scenarios. You'll learn how to build reusable logic that can be shared across components.
+                            </p>
+
+                            <div class="lesson-resources">
+                                <h3>Resources</h3>
+                                <a href="#" class="resource-link">📥 Download Lesson Files</a>
+                                <a href="#" class="resource-link">📄 Lesson Transcript</a>
+                                <a href="#" class="resource-link">🔗 External Resources</a>
+                            </div>
+
+                            <div class="lesson-nav">
+                                <button class="btn btn-ghost">← Previous Lesson</button>
+                                <button class="btn btn-primary">Mark as Complete →</button>
+                                <button class="btn btn-ghost">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-sidebar">
+                            <h3>Course Contents</h3>
+                            <ul class="chapters-list">
+                                <li class="chapter-item completed">Lesson 1: React Basics</li>
+                                <li class="chapter-item completed">Lesson 2: JSX Deep Dive</li>
+                                <li class="chapter-item completed">Lesson 3: Components & Props</li>
+                                <li class="chapter-item completed">Lesson 4: useState Hook</li>
+                                <li class="chapter-item completed">Lesson 5: useEffect Hook</li>
+                                <li class="chapter-item completed">Lesson 6: Custom Hooks</li>
+                                <li class="chapter-item completed">Lesson 7: Context API</li>
+                                <li class="chapter-item completed">Lesson 8: Optimization</li>
+                                <li class="chapter-item active">Lesson 9: Advanced Patterns</li>
+                                <li class="chapter-item">Lesson 10: Testing React</li>
+                                <li class="chapter-item">Lesson 11: Performance Tips</li>
+                                <li class="chapter-item">Lesson 12: Project Setup</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOGIN PAGE -->
+            <div id="login" class="page">
+                <div class="auth-container">
+                    <div class="auth-box">
+                        <h1 class="auth-title">Sign In</h1>
+                        <p class="auth-subtitle">Welcome back to LearnX</p>
+
+                        <form onsubmit="handleLogin(event)">
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" placeholder="your@email.com" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-input" placeholder="Enter your password" required />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Sign In</button>
+                        </form>
+
+                        <div class="auth-link">
+                            Don't have an account?
+                            <a href="#" onclick="navigateTo('signup'); return false;">Create one</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIGNUP PAGE -->
+            <div id="signup" class="page">
+                <div class="auth-container">
+                    <div class="auth-box">
+                        <h1 class="auth-title">Create Account</h1>
+                        <p class="auth-subtitle">Start your learning journey</p>
+
+                        <form onsubmit="handleSignup(event)">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" placeholder="John Doe" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" placeholder="your@email.com" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-input" placeholder="Create a strong password" required />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Create Account</button>
+                        </form>
+
+                        <div class="auth-link">
+                            Already have an account?
+                            <a href="#" onclick="navigateTo('login'); return false;">Sign in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JS -->
+    <script src="app.js"></script>
+</body>
+</html>
